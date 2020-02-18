@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="946.0" style="-fx-background-color: linear-gradient(to bottom, #cc0000 0%, #800000 100%);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.User_ManagementFXMLController">
+   <children>
+      <HBox layoutX="130.0" layoutY="8.0" prefHeight="32.0" prefWidth="600.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management" textAlignment="RIGHT" wrappingWidth="327.13671875">
+               <font>
+                  <Font name="Aparajita" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="45.0" />
+               </HBox.margin></Text>
+         </children>
+      </HBox>
+      <HBox layoutX="187.0" layoutY="59.0" prefHeight="59.0" prefWidth="588.0" style="-fx-background-color: linear-gradient(to right, #c45652 0%, #ff5050 100%);">
+         <children>
+            <Button fx:id="bot1" mnemonicParsing="false" onAction="#display" prefHeight="51.0" prefWidth="281.0" style="-fx-background-color: linear-gradient(to right, #c45652 0%, #ff5050 100%); -fx-text-fill: #f0f0f0f0;" text="Display">
+               <HBox.margin>
+                  <Insets left="5.0" right="15.0" top="3.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="bot2" mnemonicParsing="false" onAction="#delete" prefHeight="51.0" prefWidth="281.0" style="-fx-background-color: linear-gradient(to right, #c45652 0%, #ff5050 100%); -fx-text-fill: #f0f0f0f0;" text="Delete">
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Text fx:id="txt" fill="WHITE" layoutX="211.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IDU :" wrappingWidth="38.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="bot3" layoutX="470.0" layoutY="215.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: linear-gradient(to right, #c45652 0%, #ff5050 100%);" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="choice" layoutX="264.0" layoutY="222.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #c45652 0%, #ff5050 100%);" />
+      <TableView fx:id="table" layoutX="29.0" layoutY="170.0" prefHeight="215.0" prefWidth="902.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="IDU" />
+          <TableColumn fx:id="fname" prefWidth="100.0" text="FirstName" />
+            <TableColumn fx:id="lname" prefWidth="100.0" text="LastName" />
+            <TableColumn fx:id="pass" prefWidth="100.0" text="Password" />
+            <TableColumn fx:id="type" prefWidth="100.0" text="Type" />
+            <TableColumn fx:id="mail" prefWidth="150.0" text="Email" />
+            <TableColumn fx:id="photo" prefWidth="175.0" text="Photo" />
+            <TableColumn fx:id="number" prefWidth="100.0" text="Phone" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
